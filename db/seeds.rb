@@ -2,13 +2,13 @@ require "faker"
 include Faker
 
 5.times do
-  AnimalDetail.create(
+  Animal.create(
     name: Faker::Name.name,
     age: Faker::Number.number(2),
-    hair_color: Faker::Name.hair_color,
-    eye_color: Faker::Name.eye_color,
-    gender: Faker::Internet.gender,
-    alive: Faker::Internet.alive
+    #hair_color: Faker::TheThickOfIt.hair_color,
+    #eye_color: Faker::SwordArtOnline.eye_color,
+    #gender: Faker::Zelda.gender,
+    #alive: Faker::Internet.alive
   )
 
 end
