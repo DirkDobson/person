@@ -16,6 +16,23 @@ class AnimalsController < ApplicationController
     #render :new this work as well as rendering on the edit page
   end
 
+  def update
+    @animal = Animal.find(params[:id])
+
+    if @animal.update(animal_params)
+      redirect_to animal_path(@animal.id)
+    else 
+      render :edit
+    end
+  end
+
+
+  def destroy
+    Animal.find(params[:id]).destroy
+    redirect_to animals_path
+  end
+
+
   def create
     @animal = Animal.new(animal_params) 
 

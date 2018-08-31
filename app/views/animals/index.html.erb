@@ -1,5 +1,8 @@
-<h1>All Animals<h1>
+<h1>All Animals</h1>
+<%= link_to 'Add Animal', new_animal_path %>
 <% @animals.each do |animal| %>
   <%= animal.name %>
   <%= link_to 'Show', animal_path(animal.id) %>
+  <%= link_to 'Edit', edit_animal_path(animal.id) %>
+  <%= link_to 'Delete', animal_path(animal.id), method: :delete %>
   <% end %>
