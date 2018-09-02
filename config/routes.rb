@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
+  get 'plants/index'
+  get 'plants/show'
+  get 'plants/new'
   root 'static_pages#home'
   get'/about', to: 'static_pages#about'
   resources :animals
