@@ -1,0 +1,12 @@
+<%= form_for @plant do |i| %>
+  <%= i.label :name %>
+  <%= i.text_field :name %>
+
+  <%= i.label :division %>
+  <%= i.text_field :division %>
+  
+  <%= i.label :family %>
+  <%= i.text_field :family %>
+  
+  <%= i.submit %>
+<% end %>

@@ -1,2 +1,8 @@
-<h1>Plants#index</h1>
-<p>Find me in app/views/plants/index.html.erb</p>
+<h1>All Plants</h1>
+<%= link_to 'Add Plant', new_plant_path %>
+<% @plants.each do |plant| %>
+  <%= plant.name %>
+  <%= link_to 'Show', plant_path(plant.id) %>
+  <%= link_to 'Edit', edit_plant_path(plant.id) %>
+  <%= link_to 'Delete', plant_path(plant.id), method: :delete %>
+  <% end %>
