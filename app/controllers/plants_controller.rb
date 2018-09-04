@@ -26,7 +26,7 @@ class PlantsController < ApplicationController
   end
 
   def destroy 
-    plant.find(params[:id]).destroy
+    Plant.find(params[:id]).destroy
     redirect_to plants_path
   end
 
